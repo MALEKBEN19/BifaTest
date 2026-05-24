@@ -243,7 +243,7 @@
             this.mkbSalary.Name = "mkbSalary";
             this.mkbSalary.Size = new System.Drawing.Size(330, 31);
             this.mkbSalary.TabIndex = 1;
-            this.mkbSalary.Validating += new System.ComponentModel.CancelEventHandler(this.mkbSalary_Validating);
+            
             // 
             // txbEmail
             // 
@@ -252,7 +252,7 @@
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(330, 32);
             this.txbEmail.TabIndex = 0;
-            this.txbEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txbEmail_Validating);
+            
             // 
             // txbAddress
             // 
@@ -261,7 +261,7 @@
             this.txbAddress.Name = "txbAddress";
             this.txbAddress.Size = new System.Drawing.Size(330, 32);
             this.txbAddress.TabIndex = 0;
-            this.txbAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txbAddress_Validating);
+
             // 
             // txbLastName
             // 
@@ -270,7 +270,7 @@
             this.txbLastName.Name = "txbLastName";
             this.txbLastName.Size = new System.Drawing.Size(330, 32);
             this.txbLastName.TabIndex = 0;
-            this.txbLastName.Validating += new System.ComponentModel.CancelEventHandler(this.txbLastName_Validating);
+
             // 
             // txbFirstName
             // 
@@ -279,7 +279,7 @@
             this.txbFirstName.Name = "txbFirstName";
             this.txbFirstName.Size = new System.Drawing.Size(330, 32);
             this.txbFirstName.TabIndex = 0;
-            this.txbFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.txbFirstName_Validating);
+           
             // 
             // tpEmployeeList
             // 

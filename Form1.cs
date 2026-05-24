@@ -17,7 +17,7 @@ namespace BifaProject
         {
             InitializeComponent();
         }
-
+        byte counter = 0;
         private void btnLoginLogout_Click(object sender, EventArgs e)
         {
             lblUser.Text = "User : ";
@@ -35,7 +35,7 @@ namespace BifaProject
         {
             if (tabControl1.SelectedIndex < tabControl1.TabCount - 1)
             {
-                tabControl1.SelectedIndex++;
+                tabControl1.SelectTab(tabControl1.SelectedIndex+1);
             }
         }
 
@@ -43,7 +43,7 @@ namespace BifaProject
         {
             if (tabControl1.SelectedIndex > 0)
             {
-                tabControl1.SelectedIndex--;
+                tabControl1.SelectTab(tabControl1.SelectedIndex - 1);
             }
         }
 
@@ -75,81 +75,27 @@ namespace BifaProject
         private void Form1_Load(object sender, EventArgs e)
         {
             UpdateScreen();
+            this.AutoValidate = AutoValidate.Disable;
         }
-       void ValidtingBoxes(TextBox TxtBx,CancelEventArgs x) 
-        {
+  
             
-            if (string.IsNullOrWhiteSpace(TxtBx.Text))
-            {
-                x.Cancel = true;
-                TxtBx.Focus();
-                btnNext.Enabled = false;
-                btnPerivous.Enabled = false;
-                epMenu.SetError(TxtBx,"Filed Is Empty");
-                
-            }
-            else
-            {
-            
-                btnNext.Enabled = true;
-                btnPerivous.Enabled = true;
-                x.Cancel= false;
-                epMenu.SetError(TxtBx, "");
-            
-            }
-        }
-        private void txbFirstName_Validating(object sender, CancelEventArgs e)
-        {
-            ValidtingBoxes((TextBox)sender,e);
-        }
 
-        private void txbLastName_Validating(object sender, CancelEventArgs e)
-        {
-            ValidtingBoxes((TextBox)sender, e);
-        }
-
-        private void txbAddress_Validating(object sender, CancelEventArgs e)
-        {
-            ValidtingBoxes((TextBox)sender, e);
-        }
-
-        private void txbEmail_Validating(object sender, CancelEventArgs e)
-        {
-            ValidtingBoxes((TextBox)sender, e);
-        }
-
-        private void mkbSalary_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(mkbSalary.Text))
-            {
-                e.Cancel = true;
-                mkbSalary.Focus();
-                epMenu.SetError(mkbSalary,"Filed Is Empty");
-            }
-            else
-            {
-                e.Cancel = false;
-                epMenu.SetError(mkbSalary, "");
-            }
-        }
 
         private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            if (e.TabPage == tpAddEmployee)
-            {
-                return;
-            }
+       
             if (tabControl1.SelectedTab == tpAddEmployee)
             {
+               
                 if(string.IsNullOrWhiteSpace(txbFirstName.Text) ||
                     string.IsNullOrWhiteSpace(txbLastName.Text) ||
                     string.IsNullOrWhiteSpace(txbEmail.Text) || string.IsNullOrWhiteSpace(txbAddress.Text) || 
                     !mkbSalary.MaskCompleted)
                 {
-                    this.AutoValidate = AutoValidate.Disable;
+                    
                     MessageBox.Show("Please Fill The Filled","Warning",MessageBoxButtons.OK);
                     e.Cancel=true;
-                    this.AutoValidate = AutoValidate.EnablePreventFocusChange;
+                    
                 }
             }
          
