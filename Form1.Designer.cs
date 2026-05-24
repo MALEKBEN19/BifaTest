@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tpMenu = new System.Windows.Forms.TabPage();
+            this.tpAddEmployee = new System.Windows.Forms.TabPage();
             this.pbIdentity = new System.Windows.Forms.PictureBox();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -49,15 +49,15 @@
             this.txbAddress = new System.Windows.Forms.TextBox();
             this.txbLastName = new System.Windows.Forms.TextBox();
             this.txbFirstName = new System.Windows.Forms.TextBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tpEmployeeList = new System.Windows.Forms.TabPage();
+            this.tpBudget = new System.Windows.Forms.TabPage();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPerivous = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.btnLoginLogout = new System.Windows.Forms.Button();
             this.epMenu = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tpAddEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIdentity)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epMenu)).BeginInit();
@@ -65,51 +65,52 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tpMenu);
+            this.tabControl1.Controls.Add(this.tpAddEmployee);
+            this.tabControl1.Controls.Add(this.tpEmployeeList);
+            this.tabControl1.Controls.Add(this.tpBudget);
             this.tabControl1.Location = new System.Drawing.Point(30, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1083, 526);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting);
             // 
-            // tabPage1
+            // tpMenu
             // 
-            this.tabPage1.BackgroundImage = global::BifaProject.Properties.Resources.bifo;
-            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(10);
-            this.tabPage1.Size = new System.Drawing.Size(1075, 500);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Menu";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tpMenu.BackgroundImage = global::BifaProject.Properties.Resources.bifo;
+            this.tpMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tpMenu.Location = new System.Drawing.Point(4, 22);
+            this.tpMenu.Name = "tpMenu";
+            this.tpMenu.Padding = new System.Windows.Forms.Padding(10);
+            this.tpMenu.Size = new System.Drawing.Size(1075, 500);
+            this.tpMenu.TabIndex = 0;
+            this.tpMenu.Text = "Menu";
+            this.tpMenu.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tpAddEmployee
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Beige;
-            this.tabPage2.Controls.Add(this.pbIdentity);
-            this.tabPage2.Controls.Add(this.btnAddEmployee);
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.mkbSalary);
-            this.tabPage2.Controls.Add(this.txbEmail);
-            this.tabPage2.Controls.Add(this.txbAddress);
-            this.tabPage2.Controls.Add(this.txbLastName);
-            this.tabPage2.Controls.Add(this.txbFirstName);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1075, 500);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Add Employees";
+            this.tpAddEmployee.BackColor = System.Drawing.Color.Beige;
+            this.tpAddEmployee.Controls.Add(this.pbIdentity);
+            this.tpAddEmployee.Controls.Add(this.btnAddEmployee);
+            this.tpAddEmployee.Controls.Add(this.groupBox1);
+            this.tpAddEmployee.Controls.Add(this.label6);
+            this.tpAddEmployee.Controls.Add(this.label5);
+            this.tpAddEmployee.Controls.Add(this.label4);
+            this.tpAddEmployee.Controls.Add(this.label3);
+            this.tpAddEmployee.Controls.Add(this.label2);
+            this.tpAddEmployee.Controls.Add(this.label1);
+            this.tpAddEmployee.Controls.Add(this.mkbSalary);
+            this.tpAddEmployee.Controls.Add(this.txbEmail);
+            this.tpAddEmployee.Controls.Add(this.txbAddress);
+            this.tpAddEmployee.Controls.Add(this.txbLastName);
+            this.tpAddEmployee.Controls.Add(this.txbFirstName);
+            this.tpAddEmployee.Location = new System.Drawing.Point(4, 22);
+            this.tpAddEmployee.Name = "tpAddEmployee";
+            this.tpAddEmployee.Padding = new System.Windows.Forms.Padding(3);
+            this.tpAddEmployee.Size = new System.Drawing.Size(1075, 500);
+            this.tpAddEmployee.TabIndex = 1;
+            this.tpAddEmployee.Text = "Add Employees";
             // 
             // pbIdentity
             // 
@@ -280,25 +281,25 @@
             this.txbFirstName.TabIndex = 0;
             this.txbFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.txbFirstName_Validating);
             // 
-            // tabPage3
+            // tpEmployeeList
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.Beige;
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1075, 500);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Employees List";
+            this.tpEmployeeList.BackColor = System.Drawing.Color.Beige;
+            this.tpEmployeeList.Location = new System.Drawing.Point(4, 22);
+            this.tpEmployeeList.Name = "tpEmployeeList";
+            this.tpEmployeeList.Padding = new System.Windows.Forms.Padding(3);
+            this.tpEmployeeList.Size = new System.Drawing.Size(1075, 500);
+            this.tpEmployeeList.TabIndex = 2;
+            this.tpEmployeeList.Text = "Employees List";
             // 
-            // tabPage4
+            // tpBudget
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.Beige;
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1075, 500);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Budget/Employees";
+            this.tpBudget.BackColor = System.Drawing.Color.Beige;
+            this.tpBudget.Location = new System.Drawing.Point(4, 22);
+            this.tpBudget.Name = "tpBudget";
+            this.tpBudget.Padding = new System.Windows.Forms.Padding(3);
+            this.tpBudget.Size = new System.Drawing.Size(1075, 500);
+            this.tpBudget.TabIndex = 3;
+            this.tpBudget.Text = "Budget/Employees";
             // 
             // btnNext
             // 
@@ -368,8 +369,8 @@
             this.Text = "Bifa";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tpAddEmployee.ResumeLayout(false);
+            this.tpAddEmployee.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIdentity)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -382,10 +383,10 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tpMenu;
+        private System.Windows.Forms.TabPage tpAddEmployee;
+        private System.Windows.Forms.TabPage tpEmployeeList;
+        private System.Windows.Forms.TabPage tpBudget;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnPerivous;
         private System.Windows.Forms.Label lblUser;

@@ -132,5 +132,27 @@ namespace BifaProject
                 epMenu.SetError(mkbSalary, "");
             }
         }
+
+        private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (e.TabPage == tpAddEmployee)
+            {
+                return;
+            }
+            if (tabControl1.SelectedTab == tpAddEmployee)
+            {
+                if(string.IsNullOrWhiteSpace(txbFirstName.Text) ||
+                    string.IsNullOrWhiteSpace(txbLastName.Text) ||
+                    string.IsNullOrWhiteSpace(txbEmail.Text) || string.IsNullOrWhiteSpace(txbAddress.Text) || 
+                    !mkbSalary.MaskCompleted)
+                {
+                    this.AutoValidate = AutoValidate.Disable;
+                    MessageBox.Show("Please Fill The Filled","Warning",MessageBoxButtons.OK);
+                    e.Cancel=true;
+                    this.AutoValidate = AutoValidate.EnablePreventFocusChange;
+                }
+            }
+         
+        }
     }
 }
