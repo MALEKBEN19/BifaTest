@@ -17,7 +17,7 @@ namespace BifaProject
         {
             InitializeComponent();
         }
-        byte counter = 0;
+        DateTime Mydate=DateTime.Now;
         private void btnLoginLogout_Click(object sender, EventArgs e)
         {
             lblUser.Text = "User : ";
@@ -71,34 +71,29 @@ namespace BifaProject
             txbEmail.Clear();
             txbAddress.Clear();
             mkbSalary.Clear();
+            lbDate.Text = Mydate.ToString();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             UpdateScreen();
-            this.AutoValidate = AutoValidate.Disable;
         }
-  
-            
 
-
-        private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
+        private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-       
-            if (tabControl1.SelectedTab == tpAddEmployee)
+            if(string.IsNullOrWhiteSpace(txbFirstName.Text)||
+                string.IsNullOrWhiteSpace(txbLastName.Text) ||
+                string.IsNullOrWhiteSpace(txbEmail.Text) ||
+                string.IsNullOrWhiteSpace(txbAddress.Text)||
+                 string.IsNullOrWhiteSpace(mkbSalary.Text)
+                )
             {
-               
-                if(string.IsNullOrWhiteSpace(txbFirstName.Text) ||
-                    string.IsNullOrWhiteSpace(txbLastName.Text) ||
-                    string.IsNullOrWhiteSpace(txbEmail.Text) || string.IsNullOrWhiteSpace(txbAddress.Text) || 
-                    !mkbSalary.MaskCompleted)
-                {
-                    
-                    MessageBox.Show("Please Fill The Filled","Warning",MessageBoxButtons.OK);
-                    e.Cancel=true;
-                    
-                }
+                MessageBox.Show("You Need To fil all fields First","warning",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
-         
+            else
+            {
+                MessageBox.Show("Employee was Added Successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //....
+            }
         }
     }
 }

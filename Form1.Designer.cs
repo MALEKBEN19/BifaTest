@@ -33,6 +33,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpMenu = new System.Windows.Forms.TabPage();
             this.tpAddEmployee = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
             this.pbIdentity = new System.Windows.Forms.PictureBox();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -56,6 +57,7 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.btnLoginLogout = new System.Windows.Forms.Button();
             this.epMenu = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lbDate = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpAddEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIdentity)).BeginInit();
@@ -74,7 +76,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1083, 526);
             this.tabControl1.TabIndex = 0;
-            this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting);
             // 
             // tpMenu
             // 
@@ -91,6 +92,7 @@
             // tpAddEmployee
             // 
             this.tpAddEmployee.BackColor = System.Drawing.Color.Beige;
+            this.tpAddEmployee.Controls.Add(this.label7);
             this.tpAddEmployee.Controls.Add(this.pbIdentity);
             this.tpAddEmployee.Controls.Add(this.btnAddEmployee);
             this.tpAddEmployee.Controls.Add(this.groupBox1);
@@ -111,6 +113,15 @@
             this.tpAddEmployee.Size = new System.Drawing.Size(1075, 500);
             this.tpAddEmployee.TabIndex = 1;
             this.tpAddEmployee.Text = "Add Employees";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(38, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "label7";
             // 
             // pbIdentity
             // 
@@ -137,6 +148,7 @@
             this.btnAddEmployee.TabIndex = 5;
             this.btnAddEmployee.Text = "Add Employee";
             this.btnAddEmployee.UseVisualStyleBackColor = false;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // groupBox1
             // 
@@ -243,7 +255,6 @@
             this.mkbSalary.Name = "mkbSalary";
             this.mkbSalary.Size = new System.Drawing.Size(330, 31);
             this.mkbSalary.TabIndex = 1;
-            
             // 
             // txbEmail
             // 
@@ -252,7 +263,6 @@
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(330, 32);
             this.txbEmail.TabIndex = 0;
-            
             // 
             // txbAddress
             // 
@@ -261,7 +271,6 @@
             this.txbAddress.Name = "txbAddress";
             this.txbAddress.Size = new System.Drawing.Size(330, 32);
             this.txbAddress.TabIndex = 0;
-
             // 
             // txbLastName
             // 
@@ -270,7 +279,6 @@
             this.txbLastName.Name = "txbLastName";
             this.txbLastName.Size = new System.Drawing.Size(330, 32);
             this.txbLastName.TabIndex = 0;
-
             // 
             // txbFirstName
             // 
@@ -279,7 +287,6 @@
             this.txbFirstName.Name = "txbFirstName";
             this.txbFirstName.Size = new System.Drawing.Size(330, 32);
             this.txbFirstName.TabIndex = 0;
-           
             // 
             // tpEmployeeList
             // 
@@ -329,9 +336,9 @@
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.Location = new System.Drawing.Point(30, 548);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(89, 29);
+            this.lblUser.Size = new System.Drawing.Size(222, 29);
             this.lblUser.TabIndex = 3;
-            this.lblUser.Text = "User : ";
+            this.lblUser.Text = "User Will Be Here";
             // 
             // btnLoginLogout
             // 
@@ -341,7 +348,7 @@
             this.btnLoginLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLoginLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnLoginLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoginLogout.Location = new System.Drawing.Point(1119, 34);
+            this.btnLoginLogout.Location = new System.Drawing.Point(1128, 34);
             this.btnLoginLogout.Name = "btnLoginLogout";
             this.btnLoginLogout.Size = new System.Drawing.Size(72, 43);
             this.btnLoginLogout.TabIndex = 4;
@@ -353,12 +360,23 @@
             // 
             this.epMenu.ContainerControl = this;
             // 
+            // lbDate
+            // 
+            this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.Location = new System.Drawing.Point(928, 5);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(185, 25);
+            this.lbDate.TabIndex = 8;
+            this.lbDate.Text = "Date will be here";
+            this.lbDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1203, 590);
+            this.Controls.Add(this.lbDate);
             this.Controls.Add(this.btnLoginLogout);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnPerivous);
@@ -408,6 +426,8 @@
         private System.Windows.Forms.Button btnAddEmployee;
         private System.Windows.Forms.PictureBox pbIdentity;
         private System.Windows.Forms.ErrorProvider epMenu;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbDate;
     }
 }
 
