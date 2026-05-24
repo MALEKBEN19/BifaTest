@@ -78,6 +78,7 @@ namespace BifaProject
         }
        void ValidtingBoxes(TextBox TxtBx,CancelEventArgs x) 
         {
+            TabPage ThisTab=tabControl1.TabPages[1];
             if (string.IsNullOrWhiteSpace(TxtBx.Text))
             {
                 x.Cancel = true;
@@ -85,15 +86,16 @@ namespace BifaProject
                 btnNext.Enabled = false;
                 btnPerivous.Enabled = false;
                 epMenu.SetError(TxtBx,"Filed Is Empty");
-                tabControl1.Enabled = false;
+             
             }
             else
             {
-                tabControl1.Enabled = true;
+            
                 btnNext.Enabled = true;
                 btnPerivous.Enabled = true;
                 x.Cancel= false;
                 epMenu.SetError(TxtBx, "");
+            
             }
         }
         private void txbFirstName_Validating(object sender, CancelEventArgs e)
