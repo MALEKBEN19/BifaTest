@@ -58,10 +58,13 @@
             this.btnLoginLogout = new System.Windows.Forms.Button();
             this.epMenu = new System.Windows.Forms.ErrorProvider(this.components);
             this.lbDate = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpAddEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIdentity)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.tpEmployeeList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epMenu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -291,6 +294,8 @@
             // tpEmployeeList
             // 
             this.tpEmployeeList.BackColor = System.Drawing.Color.Beige;
+            this.tpEmployeeList.Controls.Add(this.label8);
+            this.tpEmployeeList.Controls.Add(this.listView1);
             this.tpEmployeeList.Location = new System.Drawing.Point(4, 22);
             this.tpEmployeeList.Name = "tpEmployeeList";
             this.tpEmployeeList.Padding = new System.Windows.Forms.Padding(3);
@@ -370,6 +375,24 @@
             this.lbDate.Text = "Date will be here";
             this.lbDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(6, 71);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(1063, 423);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(481, 30);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "label8";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,7 +407,7 @@
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Bifa";
+            this.Text = "ggg";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tpAddEmployee.ResumeLayout(false);
@@ -392,6 +415,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbIdentity)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tpEmployeeList.ResumeLayout(false);
+            this.tpEmployeeList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -428,6 +453,8 @@
         private System.Windows.Forms.ErrorProvider epMenu;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbDate;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label label8;
     }
 }
 
