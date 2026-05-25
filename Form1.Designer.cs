@@ -484,7 +484,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1203, 590);
+            this.ClientSize = new System.Drawing.Size(1200, 590);
             this.Controls.Add(this.lbDate);
             this.Controls.Add(this.btnLoginLogout);
             this.Controls.Add(this.lblUser);
