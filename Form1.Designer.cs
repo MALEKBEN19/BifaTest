@@ -393,7 +393,7 @@
             this.btnLoginLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLoginLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnLoginLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoginLogout.Location = new System.Drawing.Point(1128, 34);
+            this.btnLoginLogout.Location = new System.Drawing.Point(1120, 34);
             this.btnLoginLogout.Name = "btnLoginLogout";
             this.btnLoginLogout.Size = new System.Drawing.Size(72, 43);
             this.btnLoginLogout.TabIndex = 4;
@@ -440,6 +440,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button1.FlatAppearance.BorderSize = 4;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
