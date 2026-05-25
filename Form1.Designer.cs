@@ -166,7 +166,7 @@
             this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddEmployee.Name = "btnAddEmployee";
             this.btnAddEmployee.Size = new System.Drawing.Size(181, 54);
-            this.btnAddEmployee.TabIndex = 5;
+            this.btnAddEmployee.TabIndex = 8;
             this.btnAddEmployee.Text = "Add Employee";
             this.btnAddEmployee.UseVisualStyleBackColor = false;
             this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
@@ -192,7 +192,7 @@
             this.rbFemale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(107, 29);
-            this.rbFemale.TabIndex = 0;
+            this.rbFemale.TabIndex = 6;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
@@ -205,7 +205,7 @@
             this.rbMale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(81, 29);
-            this.rbMale.TabIndex = 0;
+            this.rbMale.TabIndex = 5;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = true;
@@ -280,7 +280,7 @@
             this.mkbSalary.Mask = "\\D\\A 000000";
             this.mkbSalary.Name = "mkbSalary";
             this.mkbSalary.Size = new System.Drawing.Size(330, 31);
-            this.mkbSalary.TabIndex = 1;
+            this.mkbSalary.TabIndex = 4;
             // 
             // txbEmail
             // 
@@ -289,7 +289,7 @@
             this.txbEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(330, 32);
-            this.txbEmail.TabIndex = 0;
+            this.txbEmail.TabIndex = 3;
             // 
             // txbAddress
             // 
@@ -298,7 +298,7 @@
             this.txbAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbAddress.Name = "txbAddress";
             this.txbAddress.Size = new System.Drawing.Size(330, 32);
-            this.txbAddress.TabIndex = 0;
+            this.txbAddress.TabIndex = 2;
             // 
             // txbLastName
             // 
@@ -307,7 +307,7 @@
             this.txbLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbLastName.Name = "txbLastName";
             this.txbLastName.Size = new System.Drawing.Size(330, 32);
-            this.txbLastName.TabIndex = 0;
+            this.txbLastName.TabIndex = 1;
             // 
             // txbFirstName
             // 

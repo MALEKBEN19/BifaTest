@@ -12,12 +12,13 @@ using System.Windows.Forms;
 namespace BifaProject
 {
     public partial class Form1 : Form
-    {
+    {  
         public Form1()
         {
             InitializeComponent();
         }
         DateTime Mydate=DateTime.Now;
+        double TotalSalaries = 0;
         private void btnLoginLogout_Click(object sender, EventArgs e)
         {
             lblUser.Text = "User : ";
@@ -30,6 +31,7 @@ namespace BifaProject
                 }
             }
         }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -72,7 +74,8 @@ namespace BifaProject
             txbAddress.Clear();
             mkbSalary.Clear();
             lbDate.Text = Mydate.ToString();
-          
+            lblTotalBudget.Text = "Budget Per Month : DZA " + TotalSalaries.ToString();
+            lblTotalEmployees.Text="Total Employees : "+listView1.Items.Count.ToString()+" Employee(s)";
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -92,17 +95,7 @@ namespace BifaProject
             }
             else
             {
-               
-                //....
-                if (string.IsNullOrWhiteSpace(txbFirstName.Text) ||
-                string.IsNullOrWhiteSpace(txbLastName.Text) ||
-                string.IsNullOrWhiteSpace(txbEmail.Text) ||
-                string.IsNullOrWhiteSpace(txbAddress.Text) ||
-                 string.IsNullOrWhiteSpace(mkbSalary.Text)
-                )
-                {
-                    return; 
-                }
+
                 ListViewItem Item=new ListViewItem();
                 Item.Text=txbFirstName.Text;
 
@@ -117,11 +110,27 @@ namespace BifaProject
                 Item.SubItems.Add(txbLastName.Text);
                 Item.SubItems.Add(txbEmail.Text);
                 Item.SubItems.Add(txbAddress.Text);
-                Item.SubItems.Add(mkbSalary.Text);
+              
+                string clean = new string(mkbSalary.Text.Where(char.IsDigit).ToArray());
+                if (string.IsNullOrWhiteSpace(clean))
+                {
+                    MessageBox.Show("Enter a valid salary!", "Warning",
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                double Salary = Convert.ToDouble(clean);
+
+                TotalSalaries += Salary;
+                Item.SubItems.Add(Salary.ToString()+" DZA ");
                 listView1.Items.Add(Item);
+
+                UpdateScreen();
                 MessageBox.Show("Employee was Added Successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+
+
 
        
     }
