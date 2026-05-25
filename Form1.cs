@@ -77,8 +77,6 @@ namespace BifaProject
         private void Form1_Load(object sender, EventArgs e)
         {
             UpdateScreen();
-           
-            
         }
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
