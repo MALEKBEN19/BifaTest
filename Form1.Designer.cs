@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpMenu = new System.Windows.Forms.TabPage();
@@ -59,7 +58,6 @@
             this.btnPerivous = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.btnLoginLogout = new System.Windows.Forms.Button();
-            this.epMenu = new System.Windows.Forms.ErrorProvider(this.components);
             this.lbDate = new System.Windows.Forms.Label();
             this.lblTotalBudget = new System.Windows.Forms.Label();
             this.lblTotalEmployees = new System.Windows.Forms.Label();
@@ -70,7 +68,6 @@
             this.groupBox1.SuspendLayout();
             this.tpEmployeeList.SuspendLayout();
             this.tpBudget.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.epMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -401,10 +398,6 @@
             this.btnLoginLogout.UseVisualStyleBackColor = false;
             this.btnLoginLogout.Click += new System.EventHandler(this.btnLoginLogout_Click);
             // 
-            // epMenu
-            // 
-            this.epMenu.ContainerControl = this;
-            // 
             // lbDate
             // 
             this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -476,7 +469,6 @@
             this.tpEmployeeList.PerformLayout();
             this.tpBudget.ResumeLayout(false);
             this.tpBudget.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.epMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -509,7 +501,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddEmployee;
         private System.Windows.Forms.PictureBox pbIdentity;
-        private System.Windows.Forms.ErrorProvider epMenu;
         private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label8;
