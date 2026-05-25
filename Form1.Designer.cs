@@ -50,18 +50,19 @@
             this.txbLastName = new System.Windows.Forms.TextBox();
             this.txbFirstName = new System.Windows.Forms.TextBox();
             this.tpEmployeeList = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.tpBudget = new System.Windows.Forms.TabPage();
+            this.lblTotalEmployees = new System.Windows.Forms.Label();
+            this.lblTotalBudget = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPerivous = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.btnLoginLogout = new System.Windows.Forms.Button();
             this.lbDate = new System.Windows.Forms.Label();
-            this.lblTotalBudget = new System.Windows.Forms.Label();
-            this.lblTotalEmployees = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tpAddEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIdentity)).BeginInit();
@@ -78,6 +79,7 @@
             this.tabControl1.Controls.Add(this.tpBudget);
             this.tabControl1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(30, 12);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1083, 526);
@@ -88,8 +90,9 @@
             this.tpMenu.BackgroundImage = global::BifaProject.Properties.Resources.bifo;
             this.tpMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tpMenu.Location = new System.Drawing.Point(4, 28);
+            this.tpMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpMenu.Name = "tpMenu";
-            this.tpMenu.Padding = new System.Windows.Forms.Padding(10);
+            this.tpMenu.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.tpMenu.Size = new System.Drawing.Size(1075, 494);
             this.tpMenu.TabIndex = 0;
             this.tpMenu.Text = "Menu";
@@ -114,8 +117,9 @@
             this.tpAddEmployee.Controls.Add(this.txbLastName);
             this.tpAddEmployee.Controls.Add(this.txbFirstName);
             this.tpAddEmployee.Location = new System.Drawing.Point(4, 28);
+            this.tpAddEmployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpAddEmployee.Name = "tpAddEmployee";
-            this.tpAddEmployee.Padding = new System.Windows.Forms.Padding(3);
+            this.tpAddEmployee.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpAddEmployee.Size = new System.Drawing.Size(1075, 494);
             this.tpAddEmployee.TabIndex = 1;
             this.tpAddEmployee.Text = "Add Employees";
@@ -135,6 +139,7 @@
             this.pbIdentity.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbIdentity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbIdentity.Location = new System.Drawing.Point(750, 57);
+            this.pbIdentity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbIdentity.Name = "pbIdentity";
             this.pbIdentity.Size = new System.Drawing.Size(309, 351);
             this.pbIdentity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -150,6 +155,7 @@
             this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEmployee.Location = new System.Drawing.Point(459, 286);
+            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddEmployee.Name = "btnAddEmployee";
             this.btnAddEmployee.Size = new System.Drawing.Size(181, 54);
             this.btnAddEmployee.TabIndex = 5;
@@ -163,7 +169,9 @@
             this.groupBox1.Controls.Add(this.rbMale);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(419, 126);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Size = new System.Drawing.Size(288, 123);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -173,6 +181,7 @@
             // 
             this.rbFemale.AutoSize = true;
             this.rbFemale.Location = new System.Drawing.Point(156, 58);
+            this.rbFemale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(107, 29);
             this.rbFemale.TabIndex = 0;
@@ -185,6 +194,7 @@
             // 
             this.rbMale.AutoSize = true;
             this.rbMale.Location = new System.Drawing.Point(30, 58);
+            this.rbMale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(81, 29);
             this.rbMale.TabIndex = 0;
@@ -247,7 +257,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 29);
+            this.label1.Location = new System.Drawing.Point(22, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 25);
             this.label1.TabIndex = 2;
@@ -258,6 +268,7 @@
             this.mkbSalary.BeepOnError = true;
             this.mkbSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mkbSalary.Location = new System.Drawing.Point(27, 377);
+            this.mkbSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mkbSalary.Mask = "\\D\\A 000000";
             this.mkbSalary.Name = "mkbSalary";
             this.mkbSalary.Size = new System.Drawing.Size(330, 31);
@@ -267,6 +278,7 @@
             // 
             this.txbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.txbEmail.Location = new System.Drawing.Point(27, 297);
+            this.txbEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(330, 32);
             this.txbEmail.TabIndex = 0;
@@ -275,6 +287,7 @@
             // 
             this.txbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.txbAddress.Location = new System.Drawing.Point(27, 217);
+            this.txbAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbAddress.Name = "txbAddress";
             this.txbAddress.Size = new System.Drawing.Size(330, 32);
             this.txbAddress.TabIndex = 0;
@@ -283,6 +296,7 @@
             // 
             this.txbLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.txbLastName.Location = new System.Drawing.Point(27, 137);
+            this.txbLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbLastName.Name = "txbLastName";
             this.txbLastName.Size = new System.Drawing.Size(330, 32);
             this.txbLastName.TabIndex = 0;
@@ -291,6 +305,7 @@
             // 
             this.txbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.txbFirstName.Location = new System.Drawing.Point(27, 57);
+            this.txbFirstName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbFirstName.Name = "txbFirstName";
             this.txbFirstName.Size = new System.Drawing.Size(330, 32);
             this.txbFirstName.TabIndex = 0;
@@ -298,14 +313,29 @@
             // tpEmployeeList
             // 
             this.tpEmployeeList.BackColor = System.Drawing.Color.Beige;
+            this.tpEmployeeList.Controls.Add(this.button2);
             this.tpEmployeeList.Controls.Add(this.label8);
             this.tpEmployeeList.Controls.Add(this.listView1);
             this.tpEmployeeList.Location = new System.Drawing.Point(4, 28);
+            this.tpEmployeeList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpEmployeeList.Name = "tpEmployeeList";
-            this.tpEmployeeList.Padding = new System.Windows.Forms.Padding(3);
+            this.tpEmployeeList.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpEmployeeList.Size = new System.Drawing.Size(1075, 494);
             this.tpEmployeeList.TabIndex = 2;
             this.tpEmployeeList.Text = "Employees List";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(804, 14);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(249, 48);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Delete Employee";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -321,8 +351,9 @@
             // 
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(6, 71);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1063, 417);
+            this.listView1.Size = new System.Drawing.Size(1063, 416);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -334,11 +365,34 @@
             this.tpBudget.Controls.Add(this.label7);
             this.tpBudget.Controls.Add(this.button1);
             this.tpBudget.Location = new System.Drawing.Point(4, 28);
+            this.tpBudget.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpBudget.Name = "tpBudget";
-            this.tpBudget.Padding = new System.Windows.Forms.Padding(3);
+            this.tpBudget.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpBudget.Size = new System.Drawing.Size(1075, 494);
             this.tpBudget.TabIndex = 3;
             this.tpBudget.Text = "Budget/Employees";
+            // 
+            // lblTotalEmployees
+            // 
+            this.lblTotalEmployees.AutoSize = true;
+            this.lblTotalEmployees.BackColor = System.Drawing.Color.White;
+            this.lblTotalEmployees.Font = new System.Drawing.Font("Calisto MT", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalEmployees.Location = new System.Drawing.Point(125, 261);
+            this.lblTotalEmployees.Name = "lblTotalEmployees";
+            this.lblTotalEmployees.Size = new System.Drawing.Size(308, 41);
+            this.lblTotalEmployees.TabIndex = 3;
+            this.lblTotalEmployees.Text = "Total Employees :";
+            // 
+            // lblTotalBudget
+            // 
+            this.lblTotalBudget.AutoSize = true;
+            this.lblTotalBudget.BackColor = System.Drawing.Color.White;
+            this.lblTotalBudget.Font = new System.Drawing.Font("Calisto MT", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalBudget.Location = new System.Drawing.Point(125, 169);
+            this.lblTotalBudget.Name = "lblTotalBudget";
+            this.lblTotalBudget.Size = new System.Drawing.Size(155, 41);
+            this.lblTotalBudget.TabIndex = 3;
+            this.lblTotalBudget.Text = "Budget :";
             // 
             // label7
             // 
@@ -350,10 +404,25 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "Budget / Total Employes";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Enabled = false;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 4;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(77, 136);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(929, 214);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // btnNext
             // 
             this.btnNext.BackColor = System.Drawing.Color.White;
             this.btnNext.Location = new System.Drawing.Point(1006, 544);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(107, 38);
             this.btnNext.TabIndex = 1;
@@ -365,6 +434,7 @@
             // 
             this.btnPerivous.BackColor = System.Drawing.Color.White;
             this.btnPerivous.Location = new System.Drawing.Point(883, 544);
+            this.btnPerivous.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPerivous.Name = "btnPerivous";
             this.btnPerivous.Size = new System.Drawing.Size(107, 38);
             this.btnPerivous.TabIndex = 2;
@@ -390,7 +460,8 @@
             this.btnLoginLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLoginLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnLoginLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoginLogout.Location = new System.Drawing.Point(1120, 34);
+            this.btnLoginLogout.Location = new System.Drawing.Point(1120, 40);
+            this.btnLoginLogout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLoginLogout.Name = "btnLoginLogout";
             this.btnLoginLogout.Size = new System.Drawing.Size(72, 43);
             this.btnLoginLogout.TabIndex = 4;
@@ -401,47 +472,12 @@
             // lbDate
             // 
             this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDate.Location = new System.Drawing.Point(928, 5);
+            this.lbDate.Location = new System.Drawing.Point(928, 8);
             this.lbDate.Name = "lbDate";
             this.lbDate.Size = new System.Drawing.Size(185, 25);
             this.lbDate.TabIndex = 8;
             this.lbDate.Text = "Date will be here";
             this.lbDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblTotalBudget
-            // 
-            this.lblTotalBudget.AutoSize = true;
-            this.lblTotalBudget.BackColor = System.Drawing.Color.White;
-            this.lblTotalBudget.Font = new System.Drawing.Font("Calisto MT", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalBudget.Location = new System.Drawing.Point(125, 169);
-            this.lblTotalBudget.Name = "lblTotalBudget";
-            this.lblTotalBudget.Size = new System.Drawing.Size(155, 41);
-            this.lblTotalBudget.TabIndex = 3;
-            this.lblTotalBudget.Text = "Budget :";
-            // 
-            // lblTotalEmployees
-            // 
-            this.lblTotalEmployees.AutoSize = true;
-            this.lblTotalEmployees.BackColor = System.Drawing.Color.White;
-            this.lblTotalEmployees.Font = new System.Drawing.Font("Calisto MT", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalEmployees.Location = new System.Drawing.Point(125, 261);
-            this.lblTotalEmployees.Name = "lblTotalEmployees";
-            this.lblTotalEmployees.Size = new System.Drawing.Size(308, 41);
-            this.lblTotalEmployees.TabIndex = 3;
-            this.lblTotalEmployees.Text = "Total Employees :";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 4;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(77, 136);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(929, 214);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -455,7 +491,9 @@
             this.Controls.Add(this.btnPerivous);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.tabControl1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "ggg";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -509,6 +547,7 @@
         private System.Windows.Forms.Label lblTotalEmployees;
         private System.Windows.Forms.Label lblTotalBudget;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
