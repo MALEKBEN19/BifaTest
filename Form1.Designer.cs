@@ -51,9 +51,16 @@
             this.txbLastName = new System.Windows.Forms.TextBox();
             this.txbFirstName = new System.Windows.Forms.TextBox();
             this.tpEmployeeList = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRemoveEmployee = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.clmFirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmLastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmSalary = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ilLargePic = new System.Windows.Forms.ImageList(this.components);
+            this.iLSmallPic = new System.Windows.Forms.ImageList(this.components);
             this.tpBudget = new System.Windows.Forms.TabPage();
             this.lblTotalEmployees = new System.Windows.Forms.Label();
             this.lblTotalBudget = new System.Windows.Forms.Label();
@@ -64,13 +71,6 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.btnLoginLogout = new System.Windows.Forms.Button();
             this.lbDate = new System.Windows.Forms.Label();
-            this.clmFirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmLastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmSalary = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.iLSmallPic = new System.Windows.Forms.ImageList(this.components);
-            this.ilLargePic = new System.Windows.Forms.ImageList(this.components);
             this.tabControl1.SuspendLayout();
             this.tpAddEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIdentity)).BeginInit();
@@ -321,7 +321,7 @@
             // tpEmployeeList
             // 
             this.tpEmployeeList.BackColor = System.Drawing.Color.Beige;
-            this.tpEmployeeList.Controls.Add(this.button2);
+            this.tpEmployeeList.Controls.Add(this.btnRemoveEmployee);
             this.tpEmployeeList.Controls.Add(this.label8);
             this.tpEmployeeList.Controls.Add(this.listView1);
             this.tpEmployeeList.Location = new System.Drawing.Point(4, 28);
@@ -332,18 +332,19 @@
             this.tpEmployeeList.TabIndex = 2;
             this.tpEmployeeList.Text = "Employees List";
             // 
-            // button2
+            // btnRemoveEmployee
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(892, 14);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(177, 42);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Delete Employee";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnRemoveEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnRemoveEmployee.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveEmployee.Location = new System.Drawing.Point(892, 14);
+            this.btnRemoveEmployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRemoveEmployee.Name = "btnRemoveEmployee";
+            this.btnRemoveEmployee.Size = new System.Drawing.Size(177, 42);
+            this.btnRemoveEmployee.TabIndex = 2;
+            this.btnRemoveEmployee.Text = "Delete Employee";
+            this.btnRemoveEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnRemoveEmployee.UseVisualStyleBackColor = false;
+            this.btnRemoveEmployee.Click += new System.EventHandler(this.btnRemoveEmployee_Click);
             // 
             // label8
             // 
@@ -365,13 +366,52 @@
             this.clmSalary});
             this.listView1.HideSelection = false;
             this.listView1.LargeImageList = this.ilLargePic;
-            this.listView1.Location = new System.Drawing.Point(6, 71);
+            this.listView1.Location = new System.Drawing.Point(6, 161);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1063, 416);
+            this.listView1.Size = new System.Drawing.Size(1063, 326);
             this.listView1.SmallImageList = this.iLSmallPic;
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // clmFirstName
+            // 
+            this.clmFirstName.Text = "First Name";
+            this.clmFirstName.Width = 120;
+            // 
+            // clmLastName
+            // 
+            this.clmLastName.Text = "Last Name";
+            this.clmLastName.Width = 120;
+            // 
+            // clmEmail
+            // 
+            this.clmEmail.Text = "Email";
+            this.clmEmail.Width = 100;
+            // 
+            // clmAddress
+            // 
+            this.clmAddress.Text = "Address";
+            this.clmAddress.Width = 100;
+            // 
+            // clmSalary
+            // 
+            this.clmSalary.Text = "Salary";
+            this.clmSalary.Width = 80;
+            // 
+            // ilLargePic
+            // 
+            this.ilLargePic.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilLargePic.ImageStream")));
+            this.ilLargePic.TransparentColor = System.Drawing.Color.Transparent;
+            this.ilLargePic.Images.SetKeyName(0, "Rajel.png");
+            this.ilLargePic.Images.SetKeyName(1, "mara.png");
+            // 
+            // iLSmallPic
+            // 
+            this.iLSmallPic.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iLSmallPic.ImageStream")));
+            this.iLSmallPic.TransparentColor = System.Drawing.Color.Transparent;
+            this.iLSmallPic.Images.SetKeyName(0, "Rajel.png");
+            this.iLSmallPic.Images.SetKeyName(1, "mara.png");
             // 
             // tpBudget
             // 
@@ -495,45 +535,6 @@
             this.lbDate.Text = "Date will be here";
             this.lbDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // clmFirstName
-            // 
-            this.clmFirstName.Text = "First Name";
-            this.clmFirstName.Width = 120;
-            // 
-            // clmLastName
-            // 
-            this.clmLastName.Text = "Last Name";
-            this.clmLastName.Width = 120;
-            // 
-            // clmEmail
-            // 
-            this.clmEmail.Text = "Email";
-            this.clmEmail.Width = 100;
-            // 
-            // clmAddress
-            // 
-            this.clmAddress.Text = "Address";
-            this.clmAddress.Width = 100;
-            // 
-            // clmSalary
-            // 
-            this.clmSalary.Text = "Salary";
-            this.clmSalary.Width = 80;
-            // 
-            // iLSmallPic
-            // 
-            this.iLSmallPic.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iLSmallPic.ImageStream")));
-            this.iLSmallPic.TransparentColor = System.Drawing.Color.Transparent;
-            this.iLSmallPic.Images.SetKeyName(0, "Rajel.png");
-            this.iLSmallPic.Images.SetKeyName(1, "mara.png");
-            // 
-            // ilLargePic
-            // 
-            this.ilLargePic.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilLargePic.ImageStream")));
-            this.ilLargePic.TransparentColor = System.Drawing.Color.Transparent;
-            this.ilLargePic.Images.SetKeyName(0, "Rajel.png");
-            this.ilLargePic.Images.SetKeyName(1, "mara.png");
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -602,7 +603,7 @@
         private System.Windows.Forms.Label lblTotalEmployees;
         private System.Windows.Forms.Label lblTotalBudget;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRemoveEmployee;
         private System.Windows.Forms.ColumnHeader clmFirstName;
         private System.Windows.Forms.ColumnHeader clmLastName;
         private System.Windows.Forms.ColumnHeader clmEmail;
