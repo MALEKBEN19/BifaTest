@@ -19,15 +19,17 @@ namespace BifaProject
         }
         DateTime Mydate = DateTime.Now;
         double TotalSalaries = 0;
+        bool DisconnectedOrConnected = false;
         private void btnLoginLogout_Click(object sender, EventArgs e)
         {
             lblUser.Text = "User : ";
             btnAddEmployee.Enabled = false;
             using (LoginScreen Login = new LoginScreen())
             {
-
+                DisconnectedOrConnected = false;
                 if (Login.ShowDialog() == DialogResult.OK)
                 {
+                    DisconnectedOrConnected = true;
                     lblUser.Text = "User : " + Login.LoggedIn;
                     btnAddEmployee.Enabled = true;
                 }
@@ -68,8 +70,8 @@ namespace BifaProject
         }
         void UpdateScreen()
         {
-            btnAddEmployee.Enabled = false;
-            lblUser.Text = "User : ";
+            btnAddEmployee.Enabled = DisconnectedOrConnected;
+            btnRemoveEmployee.Enabled = DisconnectedOrConnected;
             rbMale.Checked = true;
             txbFirstName.Clear();
             txbLastName.Clear();
@@ -83,6 +85,7 @@ namespace BifaProject
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            lblUser.Text = "User : ";
             UpdateScreen();
 
         }
@@ -129,8 +132,8 @@ namespace BifaProject
                 Item.SubItems.Add(Salary.ToString() + " DZA ");
                 listView1.Items.Add(Item);
                 RecalculateTotalSalaries();
-                UpdateScreen();
                 MessageBox.Show("Employee was Added Successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UpdateScreen();
             }
         }
 
@@ -155,7 +158,33 @@ namespace BifaProject
             if (listView1.Items.Count > 0) { 
                 listView1.Items.Remove(listView1.Items[0]);
                 RecalculateTotalSalaries();
+                UpdateScreen();
             }
+        }
+
+        private void rbLargeIcon_CheckedChanged(object sender, EventArgs e)
+        {
+            listView1.View = View.LargeIcon;
+        }
+
+        private void rbSmallIcon_CheckedChanged(object sender, EventArgs e)
+        {
+            listView1.View = View.SmallIcon;
+        }
+
+        private void rbDetails_CheckedChanged(object sender, EventArgs e)
+        {
+            listView1.View = View.Details;
+        }
+
+        private void rbList_CheckedChanged(object sender, EventArgs e)
+        {
+            listView1.View = View.List;
+        }
+
+        private void rbTile_CheckedChanged(object sender, EventArgs e)
+        {
+            listView1.View = View.Tile;
         }
     }
 }

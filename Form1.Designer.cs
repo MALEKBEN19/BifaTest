@@ -51,6 +51,12 @@
             this.txbLastName = new System.Windows.Forms.TextBox();
             this.txbFirstName = new System.Windows.Forms.TextBox();
             this.tpEmployeeList = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbTile = new System.Windows.Forms.RadioButton();
+            this.rbList = new System.Windows.Forms.RadioButton();
+            this.rbDetails = new System.Windows.Forms.RadioButton();
+            this.rbSmallIcon = new System.Windows.Forms.RadioButton();
+            this.rbLargeIcon = new System.Windows.Forms.RadioButton();
             this.btnRemoveEmployee = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -76,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbIdentity)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tpEmployeeList.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.tpBudget.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -321,6 +328,7 @@
             // tpEmployeeList
             // 
             this.tpEmployeeList.BackColor = System.Drawing.Color.Beige;
+            this.tpEmployeeList.Controls.Add(this.groupBox2);
             this.tpEmployeeList.Controls.Add(this.btnRemoveEmployee);
             this.tpEmployeeList.Controls.Add(this.label8);
             this.tpEmployeeList.Controls.Add(this.listView1);
@@ -331,6 +339,81 @@
             this.tpEmployeeList.Size = new System.Drawing.Size(1075, 494);
             this.tpEmployeeList.TabIndex = 2;
             this.tpEmployeeList.Text = "Employees List";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rbTile);
+            this.groupBox2.Controls.Add(this.rbList);
+            this.groupBox2.Controls.Add(this.rbDetails);
+            this.groupBox2.Controls.Add(this.rbSmallIcon);
+            this.groupBox2.Controls.Add(this.rbLargeIcon);
+            this.groupBox2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(7, 73);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1062, 81);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "View Mode";
+            // 
+            // rbTile
+            // 
+            this.rbTile.AutoSize = true;
+            this.rbTile.Location = new System.Drawing.Point(885, 40);
+            this.rbTile.Name = "rbTile";
+            this.rbTile.Size = new System.Drawing.Size(55, 23);
+            this.rbTile.TabIndex = 4;
+            this.rbTile.TabStop = true;
+            this.rbTile.Text = "Tile";
+            this.rbTile.UseVisualStyleBackColor = true;
+            this.rbTile.CheckedChanged += new System.EventHandler(this.rbTile_CheckedChanged);
+            // 
+            // rbList
+            // 
+            this.rbList.AutoSize = true;
+            this.rbList.Location = new System.Drawing.Point(669, 40);
+            this.rbList.Name = "rbList";
+            this.rbList.Size = new System.Drawing.Size(54, 23);
+            this.rbList.TabIndex = 3;
+            this.rbList.TabStop = true;
+            this.rbList.Text = "List";
+            this.rbList.UseVisualStyleBackColor = true;
+            this.rbList.CheckedChanged += new System.EventHandler(this.rbList_CheckedChanged);
+            // 
+            // rbDetails
+            // 
+            this.rbDetails.AutoSize = true;
+            this.rbDetails.Location = new System.Drawing.Point(453, 40);
+            this.rbDetails.Name = "rbDetails";
+            this.rbDetails.Size = new System.Drawing.Size(78, 23);
+            this.rbDetails.TabIndex = 2;
+            this.rbDetails.TabStop = true;
+            this.rbDetails.Text = "Details";
+            this.rbDetails.UseVisualStyleBackColor = true;
+            this.rbDetails.CheckedChanged += new System.EventHandler(this.rbDetails_CheckedChanged);
+            // 
+            // rbSmallIcon
+            // 
+            this.rbSmallIcon.AutoSize = true;
+            this.rbSmallIcon.Location = new System.Drawing.Point(237, 40);
+            this.rbSmallIcon.Name = "rbSmallIcon";
+            this.rbSmallIcon.Size = new System.Drawing.Size(105, 23);
+            this.rbSmallIcon.TabIndex = 1;
+            this.rbSmallIcon.TabStop = true;
+            this.rbSmallIcon.Text = "Small Icon";
+            this.rbSmallIcon.UseVisualStyleBackColor = true;
+            this.rbSmallIcon.CheckedChanged += new System.EventHandler(this.rbSmallIcon_CheckedChanged);
+            // 
+            // rbLargeIcon
+            // 
+            this.rbLargeIcon.AutoSize = true;
+            this.rbLargeIcon.Location = new System.Drawing.Point(21, 40);
+            this.rbLargeIcon.Name = "rbLargeIcon";
+            this.rbLargeIcon.Size = new System.Drawing.Size(105, 23);
+            this.rbLargeIcon.TabIndex = 0;
+            this.rbLargeIcon.TabStop = true;
+            this.rbLargeIcon.Text = "Large Icon";
+            this.rbLargeIcon.UseVisualStyleBackColor = true;
+            this.rbLargeIcon.CheckedChanged += new System.EventHandler(this.rbLargeIcon_CheckedChanged);
             // 
             // btnRemoveEmployee
             // 
@@ -377,27 +460,27 @@
             // clmFirstName
             // 
             this.clmFirstName.Text = "First Name";
-            this.clmFirstName.Width = 120;
+            this.clmFirstName.Width = 180;
             // 
             // clmLastName
             // 
             this.clmLastName.Text = "Last Name";
-            this.clmLastName.Width = 120;
+            this.clmLastName.Width = 180;
             // 
             // clmEmail
             // 
             this.clmEmail.Text = "Email";
-            this.clmEmail.Width = 100;
+            this.clmEmail.Width = 140;
             // 
             // clmAddress
             // 
             this.clmAddress.Text = "Address";
-            this.clmAddress.Width = 100;
+            this.clmAddress.Width = 140;
             // 
             // clmSalary
             // 
             this.clmSalary.Text = "Salary";
-            this.clmSalary.Width = 80;
+            this.clmSalary.Width = 120;
             // 
             // ilLargePic
             // 
@@ -561,6 +644,8 @@
             this.groupBox1.PerformLayout();
             this.tpEmployeeList.ResumeLayout(false);
             this.tpEmployeeList.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.tpBudget.ResumeLayout(false);
             this.tpBudget.PerformLayout();
             this.ResumeLayout(false);
@@ -611,6 +696,12 @@
         private System.Windows.Forms.ColumnHeader clmSalary;
         private System.Windows.Forms.ImageList iLSmallPic;
         private System.Windows.Forms.ImageList ilLargePic;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rbTile;
+        private System.Windows.Forms.RadioButton rbList;
+        private System.Windows.Forms.RadioButton rbDetails;
+        private System.Windows.Forms.RadioButton rbSmallIcon;
+        private System.Windows.Forms.RadioButton rbLargeIcon;
     }
 }
 
