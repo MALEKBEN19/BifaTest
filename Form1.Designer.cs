@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpMenu = new System.Windows.Forms.TabPage();
@@ -63,6 +64,13 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.btnLoginLogout = new System.Windows.Forms.Button();
             this.lbDate = new System.Windows.Forms.Label();
+            this.clmFirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmLastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmSalary = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.iLSmallPic = new System.Windows.Forms.ImageList(this.components);
+            this.ilLargePic = new System.Windows.Forms.ImageList(this.components);
             this.tabControl1.SuspendLayout();
             this.tpAddEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIdentity)).BeginInit();
@@ -349,11 +357,19 @@
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmFirstName,
+            this.clmLastName,
+            this.clmEmail,
+            this.clmAddress,
+            this.clmSalary});
             this.listView1.HideSelection = false;
+            this.listView1.LargeImageList = this.ilLargePic;
             this.listView1.Location = new System.Drawing.Point(6, 71);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1063, 416);
+            this.listView1.SmallImageList = this.iLSmallPic;
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -479,6 +495,45 @@
             this.lbDate.Text = "Date will be here";
             this.lbDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // clmFirstName
+            // 
+            this.clmFirstName.Text = "First Name";
+            this.clmFirstName.Width = 120;
+            // 
+            // clmLastName
+            // 
+            this.clmLastName.Text = "Last Name";
+            this.clmLastName.Width = 120;
+            // 
+            // clmEmail
+            // 
+            this.clmEmail.Text = "Email";
+            this.clmEmail.Width = 100;
+            // 
+            // clmAddress
+            // 
+            this.clmAddress.Text = "Address";
+            this.clmAddress.Width = 100;
+            // 
+            // clmSalary
+            // 
+            this.clmSalary.Text = "Salary";
+            this.clmSalary.Width = 80;
+            // 
+            // iLSmallPic
+            // 
+            this.iLSmallPic.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iLSmallPic.ImageStream")));
+            this.iLSmallPic.TransparentColor = System.Drawing.Color.Transparent;
+            this.iLSmallPic.Images.SetKeyName(0, "Rajel.png");
+            this.iLSmallPic.Images.SetKeyName(1, "mara.png");
+            // 
+            // ilLargePic
+            // 
+            this.ilLargePic.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilLargePic.ImageStream")));
+            this.ilLargePic.TransparentColor = System.Drawing.Color.Transparent;
+            this.ilLargePic.Images.SetKeyName(0, "Rajel.png");
+            this.ilLargePic.Images.SetKeyName(1, "mara.png");
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -548,6 +603,13 @@
         private System.Windows.Forms.Label lblTotalBudget;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ColumnHeader clmFirstName;
+        private System.Windows.Forms.ColumnHeader clmLastName;
+        private System.Windows.Forms.ColumnHeader clmEmail;
+        private System.Windows.Forms.ColumnHeader clmAddress;
+        private System.Windows.Forms.ColumnHeader clmSalary;
+        private System.Windows.Forms.ImageList iLSmallPic;
+        private System.Windows.Forms.ImageList ilLargePic;
     }
 }
 

@@ -92,8 +92,34 @@ namespace BifaProject
             }
             else
             {
-                MessageBox.Show("Employee was Added Successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
                 //....
+                if (string.IsNullOrWhiteSpace(txbFirstName.Text) ||
+                string.IsNullOrWhiteSpace(txbLastName.Text) ||
+                string.IsNullOrWhiteSpace(txbEmail.Text) ||
+                string.IsNullOrWhiteSpace(txbAddress.Text) ||
+                 string.IsNullOrWhiteSpace(mkbSalary.Text)
+                )
+                {
+                    return; 
+                }
+                ListViewItem Item=new ListViewItem();
+                Item.Text=txbFirstName.Text;
+
+                if (rbMale.Checked)
+                {
+                    Item.ImageIndex = 0;
+                }
+                else
+                {
+                    Item.ImageIndex = 1;
+                }
+                Item.SubItems.Add(txbLastName.Text);
+                Item.SubItems.Add(txbEmail.Text);
+                Item.SubItems.Add(txbAddress.Text);
+                Item.SubItems.Add(mkbSalary.Text);
+                listView1.Items.Add(Item);
+                MessageBox.Show("Employee was Added Successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
